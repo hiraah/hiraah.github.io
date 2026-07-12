@@ -1,0 +1,353 @@
+/*social media exploration framework */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>social media exploration framework</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', Helvetica, serif;
+}
+
+body{
+    background:#0c1c36;
+}
+
+/* HERO */
+
+.hero{
+
+    background:#142e5b;
+    color:white;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+}
+
+/* decorative blob */
+
+.hero:before{
+
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:#2e6784;
+    border-radius:35%;
+    top:-150px;
+    left:-150px;
+
+}
+
+nav{
+
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+    position:relative;
+    z-index:2;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#dbe8ff;
+
+}
+
+/* CONTENT */
+
+.container{
+
+    width:80%;
+    max-width:1100px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+    padding-top:50px;
+
+}
+
+h1{
+
+    font-size:58px;
+    line-height:1.1;
+    max-width:700px;
+    margin-bottom:25px;
+    color:#d5e3ec;
+
+}
+
+h2{
+    color:#addcf7;
+    margin-bottom:15px;
+    margin-top:25px;
+}
+
+.intro{
+
+    max-width:900px;
+    font-size:20px;
+    line-height:1.8;
+    color:#edf2ff;
+    margin-bottom:40px;
+
+}
+
+/* IMAGE */
+
+  .image-container {
+    justify-content: center;
+    justify-items: center;
+    text-align:center;
+    margin: 0;
+  }
+
+  .image-container img {
+    width: 40%; /* Ensures image fits the container */
+    height: auto;
+    border-radius: 8px; /* Softens the look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a professional "pop" */
+    
+  }
+
+  .wrap-right figcaption {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #c5d5d2;
+    font-style: italic;
+  }
+
+/* VIDEO */
+
+.video{
+
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    background:#1e0782;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin:40px 0;
+
+}
+
+/* LINKS */
+
+.links{
+
+    margin-top:50px;
+
+}
+
+.links h2{
+
+    margin-bottom:20px;
+
+}
+
+.links ul{
+
+    list-style:none;
+
+}
+
+.links li{
+
+    margin:15px 0;
+
+}
+
+.links a{
+
+    color:#68cbf5;
+    text-decoration:none;
+    font-size:18px;
+
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* FOOTER CURVE */
+
+.curve{
+
+    margin-top:100px;
+    height:140px;
+    background:#07192d;
+    border-top-left-radius:100% 120px;
+    border-top-right-radius:100% 120px;
+
+}
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    .intro{
+
+        font-size:18px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<nav>
+
+<div class="logo">🛠️ framework</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="javascript:history.back()">Back</a></li>
+<li><a href="2_survey.html" target="_blank" >Survey</a></li>
+<li><a href="#vid_demo">Demo</a></li>
+<li><a href="https://github.com/hiraah" target="_blank"> My GitHub</a></li>
+</ul> 
+
+</nav>
+
+<div class="container">
+
+<h1>Novel Multimedia Exploration Framework for Modern Apps</h1>
+
+<p class="intro">
+
+    This framework is proposed to solve some of the issues listed in this survey. The existing feature of left/ right swipe has been modified
+to swipe left/ right across similar items and scroll up/ down across random items or search results. This is aimed to give users a feel of control over
+the content they choose to see, and also facilitate them in finding new content. In addition, the framework also consists of a thrid novel exploration interface in addition to
+the exiting two main ways for finding content on social media, which are searching/scrolling and exploration page. Posts here are presented in graph-like visualization where users can
+double click a post to see other similar posts connected to it like a bird's eye view from top. 
+<div class="image-container" >
+<img src="images/projects/SUI_usability.jpg" alt="Example" class="image-container"> <figcaption>SUI usability tests results</figcaption> 
+</div>
+<br> This framework for interacting with social multimedia posts has been evaluated via Usability tests by four informed users. 
+The results of evaluation shows a promising future for the novelty with ratings in 
+upper positive ranges for the Hedonic, pragmatic and aspects of the framework and overall Usability and feel of the system. (See figure above)
+
+</p>
+
+<h2>Architechture behind the framework</h2>
+
+<p class="intro">
+Graph based methods are taking over traditional clustering techniques as they don't force you to choose a specific number or assumption before even
+forming clusters, but gives enough room for the network to unfold its unique structure and depth.
+A novel clustering approach based on graphs was applied and tested on social content. This grouping, as we know, helps find previously unrecognized patterns in data, depending on the features picked
+for forming clusters. For a set of pre-formulated queries, our proposed clustering approach clustering gave comparable or better relevancy scores, 
+in comparison to the simple keyword plus KNN similarity measures.
+</p>
+<div class="image-container" >
+<img src="images/projects/architechture.jpg" alt="Example" class="image-container"> <figcaption>Architechture of the framework</figcaption> 
+</div>
+
+
+<p class="intro">
+<br><br><br><br>
+Below is the minimal implementation of the proposed framework.
+</p>
+
+<div id="vid_demo" class="video">
+
+<video width="640" height="360" controls poster="images/projects/thumb_1.png">
+  <source src="images/projects/Presentation1.mp4" type="video/mp4">
+
+  Your browser does not support the video tag.
+</video>
+</div>
+<div class="links">
+
+<h2>Resources</h2>
+
+<ul>
+
+<li>
+<a href="2_survey.html" target="_blank">
+🔹 Survey findings article
+</a>
+</li>
+
+
+<li>
+<a href="https://github.com/hiraah/Social_engine.git" target="_blank">
+🔹 Git Repository containing SUI Framework code
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="curve"></div>
+
+</section>
+
+</body>
+</html>

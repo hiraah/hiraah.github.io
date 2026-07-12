@@ -1,0 +1,396 @@
+/*new clustering approach post */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Countries of the World</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', Helvetica, sans-serif;
+}
+
+body{
+    background:#091425;
+}
+
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 8px;
+  font-size:18px;
+  line-height:1.5;
+  max-width:700px;
+}
+
+ol ul {
+  margin-bottom: 8px;
+  font-size:18px;
+  line-height:1.5;
+  max-width:700px;
+}
+/* HERO */
+
+.hero{
+
+    background:#142e5b;
+    color:white;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+}
+
+/* decorative blob */
+
+.hero:before{
+
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:#2e6784;
+    border-radius:35%;
+    top:-150px;
+    left:-150px;
+
+}
+
+nav{
+
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+    position:relative;
+    z-index:2;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#dbe8ff;
+
+}
+
+/* CONTENT */
+
+.container{
+
+    width:80%;
+    max-width:1100px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+    padding-top:50px;
+
+}
+
+h1{
+
+    font-size:48px;
+    line-height:1.4;
+    max-width:700px;
+    margin-bottom:25px;
+    color:#63c6ff;
+}
+
+.color_high{
+   color:#63c6ff;
+   font: italic; 
+}
+
+.intro{
+
+    max-width:760px;
+    font-size:18px;
+    line-height:1.8;
+    color:#eef5f6;
+    margin-bottom:40px;
+    margin-top: 40px;
+}
+
+h2{
+    color:#addcf7;
+    margin-bottom:25px;
+    margin-top:25px;
+}
+h3{
+    color:#addcf7;
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+
+
+
+/* VIDEO */
+
+.video{
+
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    background:#163f9d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin:40px 0;
+
+}
+
+/* LINKS */
+
+.links{
+
+    margin-top:50px;
+
+}
+
+.links h2{
+
+    margin-bottom:20px;
+
+}
+
+.links ul{
+
+    list-style:none;
+
+}
+
+.links li{
+
+    margin:15px 0;
+
+}
+
+.links a{
+
+    color:#89d3ea;
+    text-decoration:none;
+    font-size:18px;
+
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* FOOTER CURVE */
+
+.curve{
+
+    margin-top:100px;
+    height:140px;
+    background:#07192d;
+    border-top-left-radius:100% 120px;
+    border-top-right-radius:100% 120px;
+
+}
+
+@media(max-width:900px){
+    h1{
+        font-size:42px;
+    }
+
+    .intro{
+        font-size:18px;
+        line-height: 1.5 px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        line-height: 1.5px;
+    }
+}
+/*imgs*/
+
+.image-row {
+    display: flex;
+    gap: 2px; /* Space between images */
+    justify-content: center;
+    margin: 10px 0;
+    
+  }
+
+  .image-container {
+    flex: 2; /* Makes them equal width */
+    text-align: center;
+    margin: 3px;
+  }
+
+  .image-container img {
+    width: 85%; /* Ensures image fits the container */
+    height: auto;
+    border-radius: 8px; /* Softens the look */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a professional "pop" */
+  }
+
+  .image-container figcaption {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #c5d5d2;
+    font-style: italic;
+}
+.medium-img {
+    width: 50% !important; /* Forces this specific width */
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<nav>
+
+<div class="logo">📊 Survey</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="javascript:history.back()">Back</a></li>
+<li><a href="https://github.com/hiraah" target="_blank">My GitHub</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h1>GDP relation to other economical factors; a basic Analysis of Kaggle Dataset</h1>
+
+
+<p class="intro">
+A dataset consisting of the records of GDP, agricultural growth, industrial growth, mortality and literacy rates and several other factors
+of countries was selected and cleaned for quick analysis. 
+The data consists of 227 rows, covering states and countries of 11 regions 
+in total and 20 attributes or columns. The analysis only re-affirms the general facts such as literacy and 
+poverty being inversely related, or GDP relation to industrial growth etc.
+
+
+<h2>Data Cleaning Steps</h2>
+They depend heavily on the quality and type of the dataset you are working with. For this data I performed following
+steps i order to be able to run operations, some steps are necessary while many are absolutely for convenience. You may
+check dataset information with df.info function to decide.
+<ol>
+<li>Change the datatypes (I converted everything to float64)</li>
+<li>Remove missing and invalid values</li>
+<li>Remove duplicates and null rows</li>
+<li>Rename columns for convenience</li>
+<li>Drop columns that are not needed and save the final, clean copy of original dataset.</li>
+</ol>
+<h2>Analysed information</h2>
+<ol>
+    <li>
+    The largest region is Africa with a total of 51 countries or states wheheras five of the top ten 
+    most populated countries belong to Asia, while Asia also being the third largest region.
+    </li>
+    <div class="image-container">
+        <img src="images/projects/countries_analysis/no_of_countries.jpg" alt="Example" class="medium-img">
+        <figcaption>Analysis of World's Countries' Economic Factors</figcaption> 
+    </div>
+
+    <li>
+        Countries with highest mortality are Afghanistan and Siera Leone, while with lowest mortality are
+        Sweden, and Hong Kong. Moreover, countries with highest birth rates are also tha ones with higher
+        deathrates, which is obvious, but the graph shows that the drop in deathrate is not as dramatic as
+        in the birthrate for same countries. wich seems to almost completely disappear along the graph. 
+    </li>
+
+        <div class="image-container" >
+            <img src="images/projects/countries_analysis/birh_versus_death_rates.jpg" alt="Example" class="medium-img""> 
+            <figcaption>Countries' Birthrate versus Deathrate</figcaption> 
+        </div>
+    <li>
+        The mortality rate (infant mortality) is inversely related to GDP, while the birthrate is inversely 
+        related to literacy. Which means, developed countries better facilitate health and nourishment of
+        lives, but are also the ones with least numbers of births. tttttt
+    </li>
+        <div class="image-row">
+          <figure class="image-container"> <img src="images/projects/countries_analysis/GDP_versus_mortality.jpg" alt="Graph_1"> </figure>
+          <figure class="image-container">  <img src="images/projects/countries_analysis/birth_rate .jpg" alt="Graph 2"> </figure>
+        </div>
+    <li>
+        agriculture and services are decreasing as the increase in GDP, but industries are increasing. Which 
+        shows that industries are contributing to GDP growth, but doesn't necessarily mean that agriculture
+        and service are not contributing. It only shows the decline and focus shift of country's 
+        economic policy. The consequences of delince in agriculture are not visible here.
+    </li>
+        <div class="image-container" >
+           <img src="images/projects/countries_analysis/industries.jpg" alt="Example" class="medium-img"> <figcaption>Industries, Services. and Agriculture w.r.t GDP growth</figcaption> 
+        </div>
+    <li>
+        Net migration is calculated as the number of people moving into a region minus the number of people 
+        moving out of it, or immigration-emigration. It seems to increase with the GDP, which aligns perfectly 
+        with the fact that developed countries have better opportunities and facilities, and are focus of attention,
+        hence attracting even more people, who migrate and then have a reinforcing effect on the increasing GDP by 
+        contributing to the economy. Hence a direct relation.
+
+    </li>
+        <div class="image-container" >
+            <img src="images/projects/countries_analysis/migration.jpg" alt="Example" class="medium-img"> <figcaption>Net migration w.r.t GDP growth</figcaption> 
+        </div>
+</ol>
+</p>
+
+<div class="links">
+<h2>GitHub Resources</h2>
+<p>Find notebook and dataset <a href="https://github.com/hiraah/data-cleaning-and-basic-analysis-in-jupyter.git" target="_blank">
+here </a>
+ </p>
+</div>
+
+</div>
+
+<div class="curve"></div>
+
+</section>
+
+</body>
+</html>

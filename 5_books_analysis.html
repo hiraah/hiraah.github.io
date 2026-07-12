@@ -1,0 +1,368 @@
+/*new clustering approach post */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Multimedia clustering based on similarity in associated textual content</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', Helvetica, sans-serif;
+}
+
+body{
+    background:#091425;
+}
+
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 8px;
+  font-size:18px;
+  line-height:1.1;
+  max-width:700px;
+  margin-bottom:25px;
+}
+
+ol ul {
+  margin-bottom: 8px;
+  font-size:18px;
+  line-height:1.1;
+  max-width:700px;
+  margin-bottom:25px;
+}
+/* HERO */
+
+.hero{
+
+    background:#04309f;
+    color:white;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
+}
+
+/* decorative blob */
+
+.hero:before{
+
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:#1d4cc0;
+    border-radius:35%;
+    top:-150px;
+    left:-150px;
+
+}
+
+nav{
+
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
+    position:relative;
+    z-index:2;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#dbe8ff;
+
+}
+
+/* CONTENT */
+
+.container{
+
+    width:80%;
+    max-width:1100px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+    padding-top:50px;
+
+}
+
+h1{
+
+    font-size:48px;
+    line-height:1.1;
+    max-width:700px;
+    margin-bottom:25px;
+    color:#63c6ff;
+}
+
+.intro{
+
+    max-width:760px;
+    font-size:18px;
+    line-height:1.8;
+    color:#eef5f6;
+    margin-bottom:40px;
+
+}
+
+h2{
+    color:#addcf7;
+    margin-bottom:15px;
+    margin-top:25px;
+}
+
+
+/* VIDEO */
+
+.video{
+
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    background:#163f9d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin:40px 0;
+
+}
+
+/* LINKS */
+
+.links{
+
+    margin-top:50px;
+
+}
+
+.links h2{
+
+    margin-bottom:20px;
+
+}
+
+.links ul{
+
+    list-style:none;
+
+}
+
+.links li{
+
+    margin:15px 0;
+
+}
+
+.links a{
+
+    color:#ffffff;
+    text-decoration:none;
+    font-size:18px;
+
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* FOOTER CURVE */
+
+.curve{
+
+    margin-top:100px;
+    height:140px;
+    background:#07192d;
+    border-top-left-radius:100% 120px;
+    border-top-right-radius:100% 120px;
+
+}
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    .intro{
+
+        font-size:18px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+        justify-content:center;
+
+    }
+
+}
+/*imgs*/
+.wrap-right {
+    float: right;
+    width: 300px;
+    margin: 0 0 15px 20px;
+}
+
+.image-row {
+    display: flex;
+    gap: 3px; /* Space between images */
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .image-container {
+    flex: 2; /* Makes them equal width */
+    text-align: center;
+    margin: 0;
+  }
+
+  .image-container img {
+    width: 80%; /* Ensures image fits the container */
+    height: auto;
+    border-radius: 8px; /* Softens the look */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a professional "pop" */
+  }
+
+  .image-container figcaption {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: #c5d5d2;
+    font-style: italic;
+  }
+
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<nav>
+
+<div class="logo">📊 Survey</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="javascript:history.back()">Back</a></li>
+<li><a href="https://github.com/hiraah" target="_blank">My GitHub</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h1>Clustering Social Media Posts Using Graph based methods</h1>
+
+
+<h2>Architechture behind the framework</h2>
+<p class="intro">
+proach, keyword similarity, and KNN similarity. This approach has the potential to serve future exploration systems with many interesting features.
+</p>
+
+<p class="information">
+ljio
+</p>
+
+<div class="placeholder">
+📷 Image Placeholder
+</div>
+
+
+<div class="video">
+▶ Demo Video Placeholder
+</div>
+
+<div class="links">
+
+<h2>GitHub Resources</h2>
+
+<ul>
+
+<li>
+<a href="https://github.com/yourusername/project1" target="_blank">
+🔹 Survey Source Code
+</a>
+</li>
+
+<li>
+<a href="https://github.com/yourusername/project2" target="_blank">
+🔹 Data Processing Scripts
+</a>
+</li>
+
+<li>
+<a href="https://github.com/yourusername/project3" target="_blank">
+🔹 Machine Learning Models
+</a>
+</li>
+
+<li>
+<a href="https://github.com/yourusername/project4" target="_blank">
+🔹 Complete Repository
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="curve"></div>
+
+</section>
+
+</body>
+</html>
