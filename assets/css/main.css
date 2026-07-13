@@ -152,7 +152,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h4, h5, h6 {
-		color: #61686b;
+		color: #1384b5; /*sections headings*/
 		font-weight: 800;
 		letter-spacing: 0.075em;
 		line-height: 1em;
@@ -160,7 +160,7 @@ input, select, textarea {
 		text-transform: uppercase;
 	}
 	h3 {
-		color: #61686b;
+		color: #474b4e;  /*projects names on main page*/
 		font-weight: 800;
 		letter-spacing: 0.075em;
 		line-height: 1em;
@@ -262,6 +262,16 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
+
+/* Contact info header on top */
+
+.contact-info {
+    position: relative;
+    top: 20px;
+    right: 30px;
+    text-align: right;
+    z-index: 10;
+}
 
 /* Container */
 
@@ -2666,7 +2676,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #062be3e5;
+			background-color: #25635ee5; /*begin button's colour*/
 			border: 0;
 			box-shadow: none;
 			color: #ffffff !important;
@@ -2677,7 +2687,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #9ed8b6;
+				background-color: #3b82c8; /*hover over begin & odhers*/
 			}
 
 			input[type="submit"].primary:active,
@@ -2748,8 +2758,8 @@ input, select, textarea {
 
 		.main .container {
 			padding: 5em 2.5em 8em 2.5em ;
-			background: rgba(255, 255, 255, 0.95);
-			box-shadow: inset 0 1px 0 0 #dddddd;
+			background: rgba(228, 234, 240, 0.95); /*main container's background*/
+			box-shadow: inset 0 1px 0 0 #dcdddd;
 		}
 
 			.main .container:before {
@@ -2818,7 +2828,7 @@ input, select, textarea {
 		}
 
 			#header header h1, #header header h2, #header header h3, #header header h4, #header header h5, #header header h6, #header header strong, #header header b {
-				color: #ffffff;
+				color: #d8dcda;  /*name on main page*/
 			}
 
 			#header header a {
@@ -2845,8 +2855,8 @@ input, select, textarea {
 				margin: 1.5em 0 0 0;
 			}
 
-		#header .container {
-			background: rgba(255, 255, 255, 0.95);
+		#header .container { 
+			background: rgba(228, 234, 240, 0.95); /* begin button*/
 			bottom: 0;
 			left: 50%;
 			margin-left: -17.5em;
